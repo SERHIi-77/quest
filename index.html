@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sea quest</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="img/ship.png"/>
+</head>
+
+<body>
+    <audio>
+        <source src="audio/1.mp3">
+    </audio>
+    <div id="app">
+ 
+        <div id="hello">
+            <h4 id="text">HelloText</h4>
+            <button id="btnHello">Start</button>
+        </div>
+ 
+        <div id=qwest style="display: none;">
+            <div id="qwestfield">
+
+                <div id="sound">
+                    <img src="img/mute_sound.png">
+                </div>
+
+                <div id="myItems1">
+                    <div id="element1_mi" style="display: none;"></div>
+                    <div id="element2_mi" style="display: none;"></div>
+                    <div id="element3_mi" style="display: none;"></div>
+                    <div id="element4_mi" style="display: none;"></div>
+                </div>
+                <div id="myItems2">
+                    <div id="target__mi" style="display: none;"></div>
+                    <div id="sudoku_mi" style="display: none;"></div>
+                    <div id="casket_mi" style="display: none;"></div>
+                    <div id="gameX_mi" style="display: none;"></div>
+                </div>
+
+                <div id="element1"></div>
+                <div id="element2" style="display: none;""></div>
+                <div id="element3" style="display: none;"></div>
+                <div id="element4" style="display: none;"></div>
+                <div id="gameX" style="display: none;"></div>
+                <div id="sudoku" style="display: none;"></div>
+
+                <div id="exitDoor"></div>
+                <div id="openDoor" style="display: none;"></div>
+
+                <div id="casket" style="display: none;"></div>
+                <div id="target" style="display: none;"></div>
+                
+            </div>
+        </div>
+    </div>
+    <div id="game1" style="display: none;">
+        <ul id="cards"></ul>
+
+        <div class="reset" id="rstBlk-g1">
+            <h2 id="parTx">key text</h2>
+            <button id="reset-g1">Take it</button>
+        </div>
+    </div>
+    <div id="massage" style="display: none;">
+                    <h2 id="h2">no exit</h2>
+
+                    <button id="btnOk">Continue</button>
+                </div>
+    <div id="g15" style="display: none;">
+
+        <div class="reset" id="rstBlk-g15" style="opacity: 0">
+            <h2>The problem is solved, having received the rope you can easily build climbing equipment and go down from the window, now you have everything to pass on the secret sea route.</h2>
+            <button id="reset-g15">Take it</button>
+        </div>
+    </div>
+    <div id="bs" style="display: none;">
+        <div id="game">
+            <div id="lifes"></div>
+            <div id="options">
+                <div id="score">
+                    Score: <span>0</span>
+                </div>
+                
+            </div>
+            <div id="player" class="skin_1"></div>
+            <div id="enemy"></div>
+        </div>
+        <div id="start">
+            <h2>The pirates are attacking !!!</h2>
+            <p>W - move up; <br>
+                S - move down; <br>
+                space - cannon fire
+            </p>
+            <button id="startBtn">to fight!</button>
+        </div>
+        <div id="end" style="display: none;">
+            <h2>Game Over</h2>
+            <h3>you sank the: <span>30</span> ships</h3>
+            <button>Ok!</button>
+        </div>
+        <div class="reset" id="rstBlk-gbs" style="opacity: 0">
+            <h2 id="btlSh">take element</h2>
+            <button id="reset-gbs">Take it</button>
+        </div>
+    </div>
+
+    <div id="sudoku_game" class="sudoku" style="display: none;">
+        <div class="sudoku-center">
+          <h1>Guess the number</h1>
+    
+          <h4>We have chosen a random number from 1 to 100. See if you can guess it in 10 moves or less. And we will tell you if your answer was more or less.</h4>
+    
+          <div class="sudoku-center">
+            <label for="guessField">Enter your try: </label>
+            <input type="number" min="1" max="100" required id="guessField" class="guessField">
+            <input type="submit" value="try your luck" class="guessSubmit">
+          </div>
+        </div>
+    
+    
+        <div class="sudoku-center">
+          <p class="guesses"></p>
+          <p class="lastResult"></p>
+          <p class="lowOrHi"></p>
+        </div>
+        <div class="sudoku">
+          <script src="sudoku.js"></script>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
